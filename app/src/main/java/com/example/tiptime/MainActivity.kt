@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         if (roundUp) {
             tip = kotlin.math.ceil(tip)
         }
-        NumberFormat.getCurrencyInstance()
         val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
+        binding.tipResult.text = getString(R.string.tip_amount, formattedTip)
     }
 }
